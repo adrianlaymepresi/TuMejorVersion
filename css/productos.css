@@ -1,0 +1,259 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color:  gray;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para el botón del carrito */
+.Btn-Container {
+    display: flex;
+    width: 250px; /* Puedes ajustar el tamaño según sea necesario */
+    height: fit-content;
+    background-color: #1d2129;
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px #bebebe;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+/* Contenedor del icono dentro del botón */
+.icon-Container {
+    width: 45px;
+    height: 45px;
+    background-color: #b9b9b9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid #1d2129;
+}
+
+/* Estilo del texto dentro del botón */
+.text {
+    width: calc(250px - 45px); /* Ajusta el tamaño del texto en función del tamaño del botón */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+}
+
+/* Transición para el icono (si es necesario) */
+.icon-Container svg {
+    transition-duration: 1.5s;
+}
+
+.Btn-Container:hover .icon-Container svg {
+    transition-duration: 1.5s;
+    animation: arrow 1s linear infinite;
+}
+
+/* Animación de la flecha cuando el botón está en hover */
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        margin-left: 0px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 10px;
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+    background-color: #27272a;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .image_container {
+    width: 100%;
+    height: 200px;
+    background-color:#b9b9b9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.card .description {
+    font-size: 0.9rem;
+    color: #d9d9d9;
+    margin-bottom: 1rem; /* Espaciado inferior */
+    text-align: justify; /* Alineación del texto */
+    padding: 0.5rem 0;
+}
+
+.card .action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .action .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #d9d9d9;
+}
+
+.card .cart-button {
+    background-color: #9a75d1;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido */
+    text-align: center; /* Centra el texto */
+    width: 40%; /* Asegura que el botón ocupe todo el ancho disponible */
+}
+
+.card .cart-button .cart-icon {
+    width: 20px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+}
+
+
+.card .cart-button:hover {
+    background-color: #675c79;
+}
+
+@media (max-width: 768px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
+
+
+/* BUSCADOR */
+
+/* Estilo para el buscador */
+.searchBox {
+    display: flex;
+    max-width: 1230px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: lavender;
+    border-radius: 50px;
+    position: relative;
+    width: 100%;
+    margin: 20px;
+}
+
+.searchButton {
+    color: white;
+    position: absolute;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #3ed2f7 0%, #007bc7 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/* Hover effect */
+.searchButton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+/* Button pressing effect */
+.searchButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Estilo para el input */
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 26px;
+    width: 100%;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 767px) {
+    .searchBox {
+        max-width: 100%;
+    }
+
+    .searchInput {
+        padding: 16px 40px 16px 20px;
+    }
+}
+
+
+/* IMAGENES */
+
+.image_container {
+    width: 100%;
+    height: 150px; /* Ajusta el tamaño según lo que necesites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Fondo para la imagen */
+    border-radius: 10px; /* Opcional: para redondear los bordes */
+    overflow: hidden;
+}
+
+.product-image {
+    width: auto;
+    height: 100%; /* Para que la imagen ocupe toda la altura del contenedor */
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    object-fit: contain; /* Ajusta la imagen para que encaje dentro del contenedor sin perder la proporción */
+}
+
+/* OFFCANVAS */
+
+.offcanvas{
+    background-color: lightgrey;
+}
+
+
+#botonCanvas{
+    background-color: lightskyblue;
+    color: black;
+}
+
+/* ESPACIO */
